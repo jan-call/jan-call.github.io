@@ -19,11 +19,11 @@
 <meta name="twitter:card" content="summary">
 
 
-<link rel="icon" href="/img/avatar.jpg">
+<link rel="icon" href="/img/1090.jpg">
 
 <link href="/css/style.css?v=1.1.0" rel="stylesheet">
 
-<link href="/css/hl_theme/zenbum.css?v=1.1.0" rel="stylesheet">
+<link href="/css/hl_theme/sublime.css?v=1.1.0" rel="stylesheet">
 
 <link href="//cdn.jsdelivr.net/npm/animate.css@4.1.0/animate.min.css" rel="stylesheet">
 
@@ -59,7 +59,7 @@
 <aside class="nav">
     <div class="nav-left">
         <a href="/" class="avatar_target">
-    <img class="avatar" src="/img/avatar.jpg" />
+    <img class="avatar" src="/img/1090.jpg" />
 </a>
 <div class="author">
     <span>John Doe</span>
@@ -124,7 +124,7 @@
     <div><a class="about  hasFriend  site_url"  href="/about">关于</a><a style="width: 50%"  class="friends">友链</a></div>
 </div>
 <input type="hidden" id="yelog_site_posts_number" value="3">
-<input type="hidden" id="yelog_site_word_count" value="140">
+<input type="hidden" id="yelog_site_word_count" value="163">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -264,12 +264,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2020-11-16 22:07:40'>2020-10-28 15:35</time>
+            发布时间 : <time class="date" title='最后更新: 2020-11-16 23:01:20'>2020-10-28 15:35</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:62</span>
+        <span>字数:82</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -304,13 +304,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>hexo clean &amp;&amp; hexo g &amp;&amp;   hexo d</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">详解：</span><br><span class="line">hexo clean   #清除缓存文件 (db.json) 和已生成的静态文件 (public)</span><br><span class="line">hexo g       #生成静态文件</span><br><span class="line">hexo d       #文件生成后立即部署网站</span><br></pre></td></tr></table></figure>
-
-
-
-
-
+        <p>上传 github 博客</p>
+<p>一键上传</p>
+<pre><code>hexo clean &amp;&amp; hexo g &amp;&amp;  hexo d</code></pre>
+<p>拆解：</p>
+<pre><code>hexo clean   #清除缓存文件 (db.json) 和已生成的静态文件 (public)
+hexo g       #生成静态文件
+hexo d       #文件生成后立即部署网站
+&amp;&amp;           #后面接上要执行的命令</code></pre>
 <p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/commands">hexo官方文档</a><br><a target="_blank" rel="noopener" href="http://yelog.org/2017/03/23/3-hexo-instruction/">叶落阁</a></p>
 
       
@@ -447,9 +448,35 @@
 
     /*列表样式*/
     
+    #post .pjax article .article-entry>ol, #post .pjax article .article-entry>ul, #post .pjax article>ol, #post .pjax article>ul{
+        border: #e2dede solid 1px;
+        border-radius: 10px;
+        padding: 10px 32px 10px 56px;
+    }
+    #post .pjax article .article-entry li>ol, #post .pjax article .article-entry li>ul,#post .pjax article li>ol, #post .pjax article li>ul{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    #post .pjax article .article-entry>ol>li, #post .pjax article .article-entry>ul>li,#post .pjax article>ol>li, #post .pjax article>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    #post .pjax article .article-entry li>ol>li, #post .pjax article .article-entry li>ul>li,#post .pjax article li>ol>li, #post .pjax article li>ul>li{
+        margin-bottom: auto;
+        margin-left: auto;
+    }
+    
 
     /* 背景图样式 */
     
+    #post {
+        background: url(https://i.loli.net/2020/11/16/uPxt4Fdb13H5GDr.jpg);
+    }
+    
+    
+    #post .index {
+        background: url(https://i.loli.net/2020/11/16/uPxt4Fdb13H5GDr.jpg);
+    }
     
 
 
@@ -458,7 +485,36 @@
 
     /*文章列表背景图*/
     
+    .nav-right:before {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        background: url("https://i.loli.net/2020/11/16/uPxt4Fdb13H5GDr.jpg");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        -ms-background-size: cover;
+        -o-background-size: cover;
+        -moz-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+    
 
+    
+    #post .pjax article :not(pre) > code {
+        color: #24292e;
+        font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+        background-color: rgba(27,31,35,.05);
+        border-radius: 3px;
+        font-size: 85%;
+        margin: 0;
+        padding: .2em .4em;
+    }
     
 </style>
 
