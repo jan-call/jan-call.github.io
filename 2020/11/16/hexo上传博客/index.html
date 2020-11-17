@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>linux dns清除缓存 | 简爱个人博客</title>
-  <meta name="keywords" content=" linux , dns ">
-  <meta name="description" content="linux dns清除缓存 | 简爱个人博客">
+  <title>hexo上传博客 | 简爱个人博客</title>
+  <meta name="keywords" content=" hexo , 3-hexo ">
+  <meta name="description" content="hexo上传博客 | 简爱个人博客">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="小男孩404页面 		 		 		 		 	 	 		 			 			 				返回首页 				咨询站长">
 <meta property="og:type" content="website">
@@ -288,9 +288,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-dns清除缓存" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-hexo上传博客" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">linux dns清除缓存</h1>
+        <h1 class="article-title">hexo上传博客</h1>
     
     <div class="article-meta">
         
@@ -300,9 +300,9 @@
             <i class="iconfont icon-category"></i>
             
             
-            <a  data-rel="linux">linux</a> > 
+            <a  data-rel="工具">工具</a> > 
             
-            <a  data-rel="linux&lt;---&gt;dns">dns</a>
+            <a  data-rel="工具&lt;---&gt;hexo">hexo</a>
             
         </span>
         
@@ -310,21 +310,21 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color1">linux</a>
+            <a class="color5">hexo</a>
             
-            <a class="color4">dns</a>
+            <a class="color2">3-hexo</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2020-11-17 13:07:48'>2020-10-28 16:12</time>
+            发布时间 : <time class="date" title='最后更新: 2020-11-17 13:23:19'>2020-11-16 20:39</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:130</span>
+        <span>字数:84</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -343,7 +343,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%AD%A3%E6%96%87"><span class="toc-text">正文</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%86%99%E5%85%A5hosts"><span class="toc-text">1.写入hosts</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E6%95%88%E6%9E%9C"><span class="toc-text">2.效果</span></a></li></ol>
+        
     
 <style>
     .left-col .switch-btn,
@@ -359,11 +359,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><div class='inner-toc'><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-text">前言</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%AD%A3%E6%96%87"><span class="toc-text">正文</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%86%99%E5%85%A5hosts"><span class="toc-text">1.写入hosts</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E6%95%88%E6%9E%9C"><span class="toc-text">2.效果</span></a></li></ol></div></p>
-<h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>之前在疯狂百度 谷歌 试了很多方法 发现等hosts生效都是要好几分钟 感觉很不方便 今天误打误撞发现原来还可以这样的 百度有多种工具说可以清除缓存 但是这样好像更方便！<br>附上国外一网站对各系统清除dns缓存地址：<br><a target="_blank" rel="noopener" href="https://linuxize.com/post/how-to-clear-the-dns-cache/">linuxize</a></p>
-<h4 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h4><h4 id="1-写入hosts"><a href="#1-写入hosts" class="headerlink" title="1.写入hosts"></a>1.写入hosts</h4><pre><code>$:sudo nano /etc/hosts
-   127.0.0.1 www.baidu.com</code></pre>
-<h4 id="2-效果"><a href="#2-效果" class="headerlink" title="2.效果"></a>2.效果</h4><p>重新打开浏览器就可以看到效果了<br><img src="https://i.loli.net/2020/11/16/O9z85opdPKLhmXn.png" alt="image.png"></p>
+        <p><div class='inner-toc'></div>上传 github 博客</p>
+<p>一键上传</p>
+<pre><code>hexo clean &amp;&amp; hexo g &amp;&amp;  hexo d</code></pre>
+<p><div class='inner-toc'></div>拆解：</p>
+<pre><code>hexo clean   #清除缓存文件 (db.json) 和已生成的静态文件 (public)
+hexo g       #生成静态文件
+hexo d       #文件生成后立即部署网站
+&amp;&amp;           #后面接上要执行的命令</code></pre>
+<p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/commands">hexo官方文档</a><br><a target="_blank" rel="noopener" href="http://yelog.org/2017/03/23/3-hexo-instruction/">叶落阁</a></p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证。邮箱：nc.nothing@gmail.com </span>
