@@ -6,19 +6,15 @@
   <meta name="keywords" content=" 内网 , day1 ">
   <meta name="description" content="内网渗透day1 | 简爱个人博客">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="小男孩404页面 		 		 		 		 	 	 		 			 			 				返回首页 				咨询站长">
 <meta property="og:type" content="website">
-<meta property="og:title" content="简爱个人博客">
-<meta property="og:url" content="http://example.com/404/404.html">
+<meta property="og:title" content="404">
+<meta property="og:url" content="http://example.com/404.html">
 <meta property="og:site_name" content="简爱个人博客">
-<meta property="og:description" content="小男孩404页面 		 		 		 		 	 	 		 			 			 				返回首页 				咨询站长">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/404/404.png">
-<meta property="article:published_time" content="2020-11-17T06:08:32.544Z">
-<meta property="article:modified_time" content="2019-06-19T02:38:36.000Z">
+<meta property="article:published_time" content="2020-11-17T06:02:50.000Z">
+<meta property="article:modified_time" content="2020-11-17T06:08:51.651Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/404/404.png">
 
 
 <link rel="icon" href="/img/1090.jpg">
@@ -375,7 +371,7 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2020-11-21 20:51:01'>2020-11-21 15:09</time>
+            发布时间 : <time class="date" title='最后更新: 2020-11-21 20:54:46'>2020-11-21 15:09</time>
         
     </div>
     <div class="article-meta">
@@ -439,7 +435,7 @@
 <h3 id="渗透本质"><a href="#渗透本质" class="headerlink" title="渗透本质"></a>渗透本质</h3><p><strong>权限</strong></p>
 <p><code>前台权限</code><br><code>后台权限</code><br><code>shell权限</code><br><code>服务器权限</code><br><code>域控权限</code><br><code>运管权限</code><br><code>主网权限</code></p>
 <h3 id="内网渗透"><a href="#内网渗透" class="headerlink" title="内网渗透"></a>内网渗透</h3><p><strong>基础知识</strong></p>
-<p><strong>权限划分</strong><br>windows<br><code>SYSTEM 系统权限</code><br><code>Administrator 管理员权限</code><br><code>User  普通权限</code><br>linux<br><code>root 最高权限</code><br><code>user  普通权限</code><br><strong>shell的权限是由什么决定的？</strong><br><code>shell的权限是由当前执行该服务（进程）的用户权限决定的</code><br><strong>shell执行系统命令是怎么一个原理呢？</strong><br>windows 下的 cmd 就相当于执行系统命令的一个入口  通过cmd然后调用系统函数来执行命令<br>shell 就是相当与封装一个 ”cmd“ 然后通过调用函数执行命令<br>图解:<br><img src="https://i.loli.net/2020/11/21/3UQEXKvtLhNlWwJ.png" alt="image.png"></p>
+<p><strong>权限划分</strong><br>windows<br><code>SYSTEM 系统权限</code><br><code>Administrator 管理员权限</code><br><code>User  普通权限</code><br>linux<br><code>root 最高权限</code><br><code>user  普通权限</code><br><strong>shell的权限是由什么决定的？</strong><br><code>shell的权限是由当前执行该服务（进程）的用户权限决定的</code><br><strong>shell执行系统命令是怎么一个原理呢？</strong><br>windows 下的 cmd 就相当于执行系统命令的一个入口  通过cmd然后调用系统函数来执行命令<br>shell 就是相当与封装一个 ”cmd“ 然后通过调用函数执行命令<br>图解:<br><img src="https://i.loli.net/2020/11/21/3UQEXKvtLhNlWwJ.png"></p>
 <p><strong>PHP获取到Webshell之后如何辨别当前是否具备命令执行权限？</strong><br><code>通过PHPINFO查看</code><br><strong>容器默认web路径</strong><br><code>例：</code><br><code>IIS的默认Web目录(weindows)</code><br><code>C:/inetpub/wwwroot</code><br><code>Apache的默认Web目录(linux)</code><br><code>/etc/httpd</code></p>
 <p><strong>权限维持</strong></p>
 <p>1.启动项维持</p>
